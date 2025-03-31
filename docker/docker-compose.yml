@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   postgres:
     image: postgres:15
@@ -15,7 +13,7 @@ services:
 
   eureka:
     build:
-      context: ./eureka
+      context: ../eureka-server
     container_name: chattr-eureka
     ports:
       - "8761:8761"
