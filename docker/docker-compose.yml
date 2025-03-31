@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: chattr-postgres
+    environment:
+      POSTGRES_DB: chattr_users
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  eureka:
+    build:
+      context: ./eureka
+    container_name: chattr-eureka
+    ports:
+      - "8761:8761"
+
+  user-service:
+    build:
+      context: ../user-service
+    container_name: chattr-user-service
+    ports:
+      - "8082:8082"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/chattr_users
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka:8761/eureka/
+    depends_on:
+      - postgres
+      - eureka
+
+  auth-service:
+    build:
+      context: ../auth-service
+    container_name: chattr-auth-service
+    ports:
+      - "8081:8081"
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka:8761/eureka/
+    depends_on:
+      - user-service
+      - eureka
+
+volumes:
+  pgdata:
