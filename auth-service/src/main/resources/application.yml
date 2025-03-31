@@ -1,0 +1,19 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: auth-service
+  cloud:
+    discovery:
+      enabled: true
+  profiles:
+    active: default
+
+environment:
+  JWT_SECRET: s3NpPZFCfDYWITkl6Vw6cJruGAaaFFHK4SQwKouFm74Ayw2O2vhuanJJYLa/5fH3RZZ0OlW5SUTvzsVoArWZaQ==
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
