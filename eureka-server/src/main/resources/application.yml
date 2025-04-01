@@ -1,4 +1,18 @@
+server:
+  port: 8761
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+
+spring:
+  application:
+    name: eureka-server
+
 management:
   metrics:
     enable:
+      all: true
       system: false
+      tomcat: false

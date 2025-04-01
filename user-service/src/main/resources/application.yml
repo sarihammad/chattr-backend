@@ -3,11 +3,11 @@ server:
 
 spring:
   config:
-    import: optional:configserver:
+    import: "optional:configserver:"
   datasource:
-    url: jdbc:postgresql://localhost:5432/chattr_users
-    username: postgres
-    password: postgres
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: update
@@ -16,6 +16,8 @@ spring:
     name: user-service
 
 eureka:
+  instance:
+    prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:http://localhost:8761/eureka/}

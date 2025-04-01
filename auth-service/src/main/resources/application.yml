@@ -3,7 +3,11 @@ server:
 
 spring:
   config:
-    import: optional:configserver:
+    import: "optional:configserver:"
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
   application:
     name: auth-service
   cloud:
@@ -18,10 +22,9 @@ spring:
   profiles:
     active: default
 
-environment:
-  JWT_SECRET: s3NpPZFCfDYWITkl6Vw6cJruGAaaFFHK4SQwKouFm74Ayw2O2vhuanJJYLa/5fH3RZZ0OlW5SUTvzsVoArWZaQ==
-
 eureka:
+  instance:
+    prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE}
