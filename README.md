@@ -1,6 +1,6 @@
-# Chattr - Scalable Real-Time Chat & Video Application
+# Chattr - Scalable Real-Time Chat & Video Application (In Progress)
 
-**Chattr** is a scalable, real-time messaging and video chat platform inspired by WhatsApp — but with a twist: it enables users to connect randomly with others for casual conversations, friendships, or romantic connections. Built using a microservices architecture in **Spring Boot**, Chattr is designed to be an end-to-end learning playground for mastering **system design**, **distributed systems**, and **cloud-native development**.
+**Chattr** is a scalable, real-time messaging and video chat platform. it enables users to connect randomly with others for casual conversations, friendships, or romantic connections. Built using a microservices architecture in **Spring Boot** for mastering **system design**, **distributed systems**, and **cloud-native development**.
 
 ---
 
@@ -66,7 +66,7 @@ chattr-backend/
 ├── friendship-service/
 ├── analytics-service/
 ├── shared-library/
-├── docker/               # Docker Compose for local dev
+├── docker/               
 ├── k8s/                  # Kubernetes manifests (future)
 └── docs/                 # Architecture diagrams and specs
 ```
