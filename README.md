@@ -1,6 +1,10 @@
 # Chattr - Scalable Real-Time Chat & Video Application (In Progress)
 
-**Chattr** is a scalable, real-time messaging and video chat platform. it enables users to connect randomly with others for casual conversations, friendships, or romantic connections. Built using a microservices architecture in **Spring Boot** for mastering **system design**, **distributed systems**, and **cloud-native development**.
+**Chattr** is a real-time messaging and video chat platform designed to scale.  
+
+It enables users to connect for casual conversations, friendships, or romantic chats — blending the best of WhatsApp, Discord, Omegle, and Tinder.
+
+Built using a distributed microservices architecture in **Spring Boot**, Chattr is a backend-focused project designed to master **system design**, **distributed systems**, and **cloud-native development**.
 
 ---
 
