@@ -8,28 +8,31 @@ Built using a distributed microservices architecture in **Spring Boot**, Chattr 
 
 ---
 
-## Project Outline 
-- Build a **WhatsApp-like app** with messaging, calling, and media features.
-- Add **random user matching** functionality (like Omegle/Tinder).
-- Explore **distributed system design** in depth.
-- Use modern architectural principles: **microservices**, **event-driven**, **gRPC**, **horizontal scaling**.
+## Project Goals 
+- Build a real-time platform with chat, calling, and media features
+- Implement **random user matching** (like Omegle/Tinder)
+- Explore **modern distributed system design** at scale
+- Master principles of:
+  - Microservices
+  - Event-driven architecture
+  - gRPC + WebSockets
+  - Observability + CI/CD
 
 ---
 
-## Features
+## Core Features
 
-- User registration & login (JWT based)
-- Real-time text chat (1-on-1)
-- Random user matching engine (casual/friend/romantic)
-- Online/offline presence tracking
-- Group chats
-- Audio & video calls (via WebRTC)
-- End-to-end encrypted messages
-- Profile discovery & swipe-based matching
-- Push notifications
-- Media sharing (images, voice notes, videos)
+- JWT-based user authentication (OAuth2 planned)
+- Real-time 1-on-1 chat (WebSocket + Redis)
+- Random user matching (friend, casual, romantic)
+- Presence tracking (online, last seen)
+- WebRTC audio + video calls
+- Media sharing (images, videos, voice notes)
+- Swipe-based user discovery
+- Push notifications (mobile/web)
 - Moderation tools (report/block)
-- Analytics and usage tracking
+- Group chat support
+- Analytics + usage tracking
 
 ---
 
@@ -126,3 +129,13 @@ chattr-backend/
 - Metrics: Prometheus + Grafana
 - Logs: Centralized logging (ELK or Loki)
 - Tracing: Zipkin/Jaeger for distributed tracing
+
+## Why This Project?
+
+Chattr is more than a chat app — it’s a system design playground that touches:
+
+	•	Authentication
+	•	Realtime systems
+	•	Horizontal scaling
+	•	Queues, pub/sub
+	•	CI/CD and observability
