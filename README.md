@@ -1,4 +1,4 @@
-# Chattr - Scalable Real-Time Chat & Video Application (In Progress)
+# Chattr - Scalable Real-Time Chat & Video Application
 
 **Chattr** is a real-time messaging and video chat platform designed to scale.  
 
